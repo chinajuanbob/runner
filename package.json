@@ -1,0 +1,25 @@
+{
+  "name": "runner",
+  "version": "0.0.1",
+  "description": "A low level component for running a nodejs program with FSM, logger,process communication and management.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chinajuanbob/runner.git"
+  },
+  "keywords": [
+    "FSM",
+    "runner",
+    "process",
+    "management"
+  ],
+  "author": "chinajuanbob",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/chinajuanbob/runner/issues"
+  },
+  "homepage": "https://github.com/chinajuanbob/runner#readme"
+}
