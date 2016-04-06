@@ -19,7 +19,7 @@ gulp.task('pre-test', function () {
 		// Force `require` to return covered files 
 		istanbul.hookRequire()
 	]);
-	combined.on('error', console.error.bind(console));
+	combined.once('error', console.error.bind(console));
 	return combined;
 });
  
@@ -32,7 +32,15 @@ gulp.task('test', ['pre-test'], function () {
 		// Enforce a coverage of at least 90% 
 		//istanbul.enforceThresholds({ thresholds: { global: 90 } })
 	]);
-	combined.on('error', console.error.bind(console));
+	combined.once('error', function (error) {
+		console.error(error);
+        process.exit(1);
+    });
+	combined.once('end', function () {
+		setTimeout(function(){
+			process.exit();
+		}, 500);
+    });
 	return combined;
 });
 
@@ -46,7 +54,7 @@ gulp.task('build', function () {
 		concat('index.js'),
 		gulp.dest('build')
 	]);
-	combined.on('error', console.error.bind(console));
+	combined.once('error', console.error.bind(console));
 	return combined;
 });
 
