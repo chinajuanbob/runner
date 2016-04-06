@@ -21,5 +21,13 @@
   "bugs": {
     "url": "https://github.com/chinajuanbob/runner/issues"
   },
-  "homepage": "https://github.com/chinajuanbob/runner#readme"
+  "homepage": "https://github.com/chinajuanbob/runner#readme",
+  "dependencies": {
+    "async": "^2.0.0-rc.2",
+    "automata": "^2.0.3",
+    "later": "^1.2.0",
+    "moment": "^2.12.0",
+    "underscore": "^1.8.3",
+    "winston": "^2.2.0"
+  }
 }
